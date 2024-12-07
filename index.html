@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         body {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background: linear-gradient(135deg, #1e3c72, #0655de);
             color: white;
             font-family: 'Arial', sans-serif;
-            height: 100vh;
-            margin: 0;
-            display: flex;
+            height: auto;
+            margin: none;
+            padding: none;
             justify-content: center;
             align-items: center;
         }
 
-        .container-fluid {
+        .container {
             text-align: center;
         }
 
@@ -29,12 +29,12 @@
         }
 
         .btn-custom {
-            margin: 10px;
+            margin: 5px;
             padding: 15px 30px;
-            font-size: 1.2rem;
+            font-size: 1rem;
             border: none;
-            border-radius: 50px;
-            transition: transform 0.2s ease-in-out;
+            border-radius: 20px;
+            transition: transform 0.2 ease-in-out;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -53,13 +53,16 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container mt-5 vh-100">
         <a href="https://sman2mengwi.sch.id" target="_blank"><img src="/img/Logo Dwisma.png" alt="Logo Aplikasi"
                 class="logo"></a>
+        <p class="fst-italic fw-bolder">SMAN 2 Mengwi</p>
         <h1 class="fw-bold">Selamat Datang di Portal Dwisma</h1>
-        <p>Pilih menu di bawah untuk menuju ke aplikasi tujuan anda</p>
+
+        <!-- Aplikasi Sekolah -->
+        <h6 class="mt-5">Aplikasi Sekolah</h6>
         <div class="d-flex justify-content-center flex-wrap">
-            <a href="https://dapodik.dwisma.id" target="_blank" class="btn btn-info btn-custom">
+            <a href="https://dapodik.dwisma.id" target="_blank" class="btn btn-primary btn-custom">
                 <img src="/img/Logo Dapodik.png" alt="Logo Dapodik">Dapodik
             </a>
             <a href="https://simatik.dwisma.id" target="_blank" class="btn btn-success btn-custom">
@@ -68,9 +71,11 @@
             <a href="https://erapot.dwisma.id" target="_blank" class="btn btn-warning btn-custom">
                 <img src="/img/Logo Rapot.png" alt="Logo Rapot">Rapot
             </a>
-            <a href="https://myasn.bkn.go.id" target="_blank" class="btn btn-primary btn-custom">
-                <img src="/img/Logo Dapodik.png" alt="Logo Dapodik">My ASN
-            </a>
+        </div>
+
+        <!-- Aplikasi Pemprov -->
+        <h6 class="mt-5">Aplikasi Pemerintah Provinsi</h6>
+        <div class="d-flex justify-content-center flex-wrap">
             <a href="https://simpeg.baliprov.go.id" target="_blank" class="btn btn-light btn-custom">
                 <img src="https://kanal.baliprov.go.id/system/simpeg-logo.png" alt="Logo Simatik">Simpeg
             </a>
@@ -79,8 +84,23 @@
                     alt="Logo Rapot">Sikepo
             </a>
         </div>
-        <div class="">
-            <i class="youtube"></i>
+
+        <!-- Aplikasi Pusat -->
+        <h6 class="mt-5">Aplikasi Pemerintah Pusat</h6>
+        <div class="d-flex justify-content-center flex-wrap">
+            <a href="https://myasn.bkn.go.id" target="_blank" class="btn btn-primary btn-custom">
+                <img src="/img/Logo Dapodik.png" alt="Logo Dapodik">My ASN
+            </a>
+            <a href="https://info.gtk.kemdikbud.go.id/" target="_blank" class="btn btn-warning btn-custom">
+                <img src="https://info.gtk.kemdikbud.go.id/assets/img/favicon.png" alt="Logo Rapot">Info-Gtk
+            </a>
+            <a href="https://paspor-gtk.simpkb.id/" target="_blank" class="btn btn-light btn-custom">
+                <img src="https://paspor-gtk.simpkb.id/casgpo/asset/img/logo-kemdikbud.png;jsessionid=A97E9D14E2A38D59FDEF5303F454F6D8"
+                    alt="Logo Rapot">Simpkb
+            </a>
+            <a href="https://paspor-gtk.simpkb.id/" target="_blank" class="btn btn-info btn-custom">
+                <img src="https://cdn-dapodik.kemdikbud.go.id/sp/favicon.ico" alt="Logo Rapot">Datadik
+            </a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
