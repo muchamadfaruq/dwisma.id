@@ -2,18 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portal Aplikasi SMAN 2 Mengwi</title>
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Merriweather:wght@700&display=swap"
+        rel="stylesheet" />
     <style>
+        /* Blue and white gradient background with subtle fade */
         body {
-            background: linear-gradient(135deg, #0d6efd, #198754);
-            background-attachment: fixed;
-            color: white;
-            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0057b7 0%, #cce4f7 60%, #ffffff 100%);
+            color: #0d1b2a;
+            font-family: 'Nunito Sans', Arial, sans-serif;
             height: 100%;
             margin: 0;
             padding: 0;
@@ -22,23 +25,122 @@
 
         .container {
             text-align: center;
+            padding: 2rem;
+            background: #ffffffcc;
+            /* slightly transparent white background */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.25);
+            max-width: 480px;
+            margin: 3rem auto 3rem;
+            backdrop-filter: saturate(180%) blur(15px);
         }
 
         .logo {
-            width: 150px;
+            width: 140px;
             margin-bottom: 20px;
+            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.1));
+        }
+
+        .fst-italic {
+            font-family: 'Merriweather', serif;
+            font-size: 1.2rem;
+            color: #1a2e4add;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            color: #0d1b2a;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        h6 {
+            margin-top: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #007bff;
+            font-family: 'Nunito Sans', sans-serif;
         }
 
         .btn-custom {
             margin: 10px;
-            padding: 15px 30px;
+            padding: 14px 28px;
             font-size: 1rem;
             border: none;
-            border-radius: 20px;
-            transition: transform 0.2 ease-in-out;
+            border-radius: 14px;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+            color: #ffffff;
+            background-color: #007bff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary.btn-custom {
+            background-color: #0056b3;
+            box-shadow: 0 6px 18px rgba(0, 86, 179, 0.5);
+            color: white;
+        }
+
+        .btn-primary.btn-custom:hover {
+            background-color: #003d80;
+        }
+
+        .btn-success.btn-custom {
+            background-color: #198754;
+            box-shadow: 0 6px 18px rgba(25, 135, 84, 0.5);
+        }
+
+        .btn-success.btn-custom:hover {
+            background-color: #135e3e;
+        }
+
+        .btn-warning.btn-custom {
+            background-color: #ffc107;
+            box-shadow: 0 6px 18px rgba(255, 193, 7, 0.5);
+            color: #0d1b2a;
+            text-shadow: none;
+        }
+
+        .btn-warning.btn-custom:hover {
+            background-color: #cc9a06;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-danger.btn-custom {
+            background-color: #dc3545;
+            box-shadow: 0 6px 18px rgba(220, 53, 69, 0.5);
+        }
+
+        .btn-danger.btn-custom:hover {
+            background-color: #931f28;
+        }
+
+        .btn-light.btn-custom {
+            background-color: #e9ecef;
+            color: #0d1b2a;
+            box-shadow: 0 6px 18px rgba(233, 236, 239, 0.7);
+            text-shadow: none;
+        }
+
+        .btn-light.btn-custom:hover {
+            background-color: #ced4da;
+            color: #0d1b2a;
+            text-shadow: none;
+        }
+
+        .btn-info.btn-custom {
+            background-color: #0dcaf0;
+            box-shadow: 0 6px 18px rgba(13, 202, 240, 0.5);
+        }
+
+        .btn-info.btn-custom:hover {
+            background-color: #0a8ccf;
         }
 
         .btn-custom:hover {
@@ -49,75 +151,113 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
+            object-fit: contain;
+            filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+        }
+
+        p.fst-italic.fw-bolder {
+            font-family: 'Merriweather', serif;
+            font-size: 1.3rem;
+            color: #1a2e4acc;
+            margin-top: 0;
+            margin-bottom: 0.4rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .container {
+                margin: 1.5rem 1rem 2rem;
+                padding: 1.5rem;
+                width: 90vw;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            p.fst-italic.fw-bolder {
+                font-size: 1.1rem;
+            }
+
+            .btn-custom {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container my-5 vh-100">
-        <a href="https://sman2mengwi.sch.id" target="_blank"><img src="/img/Logo Dwisma.png" alt="Logo Aplikasi"
-                class="logo"></a>
+    <div class="container">
+        <a href="https://sman2mengwi.sch.id" target="_blank" rel="noopener">
+            <img src="/img/Logo Dwisma.png" alt="Logo Aplikasi" class="logo" />
+        </a>
         <p class="fst-italic fw-bolder">SMAN 2 Mengwi</p>
         <h1 class="fw-bold">Selamat Datang di Portal Dwisma</h1>
 
         <!-- Aplikasi Sekolah -->
-        <h6 class="mt-5 fst-italic fw-bold">Aplikasi Sekolah</h6>
+        <h6 class="fst-italic fw-bold">Aplikasi Sekolah</h6>
         <div class="d-flex justify-content-center flex-wrap">
-            <a href="https://dapodik.dwisma.id" target="_blank" class="btn btn-primary btn-custom">
-                <img src="/img/Logo Dapodik.png" alt="Logo Dapodik">Dapodik
+            <a href="https://dapodik.dwisma.id" target="_blank" rel="noopener" class="btn btn-primary btn-custom">
+                <img src="/img/Logo Dapodik.png" alt="Logo Dapodik" />Dapodik
             </a>
-            <a href="https://simatik.dwisma.id" target="_blank" class="btn btn-success btn-custom">
-                <img src="/img/Logo Dwisma.png" alt="Logo Simatik">Simatik
+            <a href="https://simatik.dwisma.id" target="_blank" rel="noopener" class="btn btn-success btn-custom">
+                <img src="/img/Logo Dwisma.png" alt="Logo Simatik" />Simatik
             </a>
-            <a href="https://erapot.dwisma.id" target="_blank" class="btn btn-warning btn-custom">
-                <img src="/img/Logo Rapot.png" alt="Logo Rapot">Rapot
+            <a href="https://erapot.dwisma.id" target="_blank" rel="noopener" class="btn btn-danger btn-custom">
+                <img src="/img/Logo Rapot.png" alt="Logo Rapot" />Rapot
             </a>
-            <a href="https://pustaka.dwisma.id" target="_blank" class="btn btn-warning btn-custom">
-                <img src="/img/Logo Pustaka.png" alt="Logo Rapot">Perpustakaan
+            <a href="https://pustaka.dwisma.id" target="_blank" rel="noopener" class="btn btn-warning btn-custom">
+                <img src="/img/Logo Pustaka.png" alt="Logo Pustaka" />E-Pustaka
             </a>
-            <a href="https://s.id/cbtdwisma" target="_blank" class="btn btn-warning btn-custom">
-                <img src="/img/Logo Pustaka.png" alt="Logo Rapot">CBT Dwisma
+            <a href="https://s.id/cbtdwisma" target="_blank" rel="noopener" class="btn btn-secondary btn-custom">
+                <img src="/img/Logo CBT.png" alt="Logo CBT Dwisma" />CBT
             </a>
         </div>
 
         <!-- PMM -->
-        <h6 class="mt-5 fst-italic fw-bolder">Platform <span style="color: red;">Merdeka</span> <span
-                style="color: blue;">Mengajar</span></h6>
+        <h6 class="fst-italic fw-bolder">Platform <span style="color: #dc3545;">Merdeka</span> <span
+                style="color: #007bff;">Mengajar</span></h6>
         <div class="d-flex justify-content-center flex-wrap">
-            <a href="https://guru.kemdikbud.go.id" target="_blank" class="btn btn-light btn-custom">
+            <a href="https://guru.kemdikbud.go.id" target="_blank" rel="noopener" class="btn btn-seconday btn-custom">
                 <img src="https://pwmu.co/wp-content/uploads/2022/10/Screen-Shot-2022-10-19-at-11.40.44.png"
-                    alt="Logo Simatik">PMM
+                    alt="Logo PMM" />Ruang GTK
             </a>
         </div>
 
-
         <!-- Aplikasi Pemprov -->
-        <h6 class="mt-5 fst-italic fw-bold">Aplikasi Pemerintah Provinsi</h6>
+        <h6 class="fst-italic fw-bold">Aplikasi Pemerintah Provinsi</h6>
         <div class="d-flex justify-content-center flex-wrap">
-            <a href="https://simpeg.baliprov.go.id" target="_blank" class="btn btn-warning btn-custom">
-                <img src="https://kanal.baliprov.go.id/system/simpeg-logo.png" alt="Logo Simatik">Simpeg
+            <a href="https://simpeg.baliprov.go.id" target="_blank" rel="noopener" class="btn btn-warning btn-custom">
+                <img src="https://kanal.baliprov.go.id/system/simpeg-logo.png" alt="Logo Simpeg" />Simpeg
             </a>
-            <a href="https://sikepo.baliprov.go.id" target="_blank" class="btn btn-danger btn-custom">
+            <a href="https://sikepo.baliprov.go.id" target="_blank" rel="noopener" class="btn btn-danger btn-custom">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4nXInk5gM5OblLKEad08BYCgf51jsVt1pyQ&s"
-                    alt="Logo Rapot">Sikepo
+                    alt="Logo Sikepo" />Sikepo
+            </a>
+            <a href="https://kelasvirtual.baliprov.go.id/" target="_blank" rel="noopener"
+                class="btn btn-primary btn-custom">
+                <img src="/img/Logo Kelas Virtual.png" alt="Logo Kelas Virtual" />Kelas Virtual
             </a>
         </div>
 
         <!-- Aplikasi Pusat -->
-        <h6 class="mt-5 fst-italic fw-bold">Aplikasi Pemerintah Pusat</h6>
+        <h6 class="fst-italic fw-bold">Aplikasi Pemerintah Pusat</h6>
         <div class="d-flex justify-content-center flex-wrap">
-            <a href="https://myasn.bkn.go.id" target="_blank" class="btn btn-primary btn-custom">
-                <img src="/img/Logo Dapodik.png" alt="Logo Dapodik">My ASN
+            <a href="https://myasn.bkn.go.id" target="_blank" rel="noopener" class="btn btn-primary btn-custom">
+                <img src="/img/Logo Dapodik.png" alt="Logo My ASN" />My ASN
             </a>
-            <a href="https://info.gtk.kemdikbud.go.id/" target="_blank" class="btn btn-warning btn-custom">
-                <img src="https://info.gtk.kemdikbud.go.id/assets/img/favicon.png" alt="Logo Rapot">Info-Gtk
+            <a href="https://info.gtk.dikdasmen.go.id/" target="_blank" rel="noopener"
+                class="btn btn-warning btn-custom">
+                <img src="https://info.gtk.dikdasmen.go.id/assets/img/favicon.png" alt="Logo Info-Gtk" />Info-Gtk
             </a>
-            <a href="https://paspor-gtk.simpkb.id/" target="_blank" class="btn btn-light btn-custom">
+            <a href="https://paspor-gtk.simpkb.id/" target="_blank" rel="noopener" class="btn btn-light btn-custom">
                 <img src="https://paspor-gtk.simpkb.id/casgpo/asset/img/logo-kemdikbud.png;jsessionid=A97E9D14E2A38D59FDEF5303F454F6D8"
-                    alt="Logo Rapot">Simpkb
+                    alt="Logo Simpkb" />Simpkb
             </a>
-            <a href="https://ptk.datadik.kemdikbud.go.id/" target="_blank" class="btn btn-info btn-custom">
-                <img src="https://cdn-dapodik.kemdikbud.go.id/sp/favicon.ico" alt="Logo Rapot">Datadik
+            <a href="https://ptk.datadik.kemdikbud.go.id/" target="_blank" rel="noopener"
+                class="btn btn-info btn-custom">
+                <img src="https://cdn-dapodik.kemdikbud.go.id/sp/favicon.ico" alt="Logo Datadik" />Datadik
             </a>
         </div>
     </div>
