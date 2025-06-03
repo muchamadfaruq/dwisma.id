@@ -14,9 +14,9 @@
             padding: 2rem;
             background: #ffffffcc;
             /* slightly transparent white background */
-            border-radius: 20px;
+            border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 123, 255, 0.25);
-            max-width: 480px;
+            max-width: auto;
             margin: 3rem auto 3rem;
             backdrop-filter: saturate(180%) blur(15px);
         }
