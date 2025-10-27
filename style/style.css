@@ -1,24 +1,33 @@
         /* Blue and white gradient background with subtle fade */
         body {
-            background: linear-gradient(135deg, #0057b7 0%, #cce4f7 60%, #ffffff 100%);
+            /* light semi-transparent white overlay so teks tetap gelap di atas gambar */
+            background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.9)), url("../img/background.jpeg") center/cover no-repeat fixed;
             color: #0d1b2a;
             font-family: 'Nunito Sans', Arial, sans-serif;
-            height: 100%;
+            min-height: 100vh;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
         }
 
+        .navbar,
+        .bg-body-tertiary {
+            font-weight: bold;
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
         .container {
+            font-weight: bolder;
             text-align: center;
-            padding: 2rem;
-            background: #ffffffcc;
-            /* slightly transparent white background */
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.25);
-            max-width: auto;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            background: transparent; /* hilangkan box */
+            border-radius: 0;         /* hapus rounded corners */
+            box-shadow: none;         /* hapus shadow */
             margin: 3rem auto 3rem;
-            backdrop-filter: saturate(180%) blur(15px);
+            backdrop-filter: none;    /* opsional: matikan blur */
+            transition: none;
         }
 
         .logo {
